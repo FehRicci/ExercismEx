@@ -14,30 +14,30 @@ namespace ConsoleApp1
         {
 
 
-            return Converter(frase);
+            return Executando(frase);
 
         }
 
-        private static String Converter(string frase)
+        private static String Executando(string frase)
         {
-            return Omit4(Omit5(camelCase(Replace1(Replace2(frase)))));
+            return SpecialChar(Greek(camelCase(Space(Ctrl(frase)))));
 
 
         }
-        private static String Replace1(string frase)
+        private static String Space(string frase)
         {
             return frase.Replace(" ", "_");
 
         }
-        private static string Replace2(string frase)
+        private static string Ctrl(string frase)
         {
             return frase.Replace("\0", "CTRL");
         }
-        private static string Omit4(string frase)
+        private static string SpecialChar(string frase)
         {
             return Regex.Replace(frase, "[^a-zA-ZΑ-Ω_àḂḃçĐ]", "");
         }
-        private static string Omit5(string frase)
+        private static string Greek(string frase)
         {
             return Regex.Replace(frase, "[α-ω]", "");
         }
