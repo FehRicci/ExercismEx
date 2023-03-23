@@ -11,62 +11,52 @@ namespace ConsoleApp1
     internal class Identifier
     {
 
-
-        public static string Clean(String frase)
+        public static string Clean(string frase)
         {
 
+            foreach (char c in frase)
+            {
 
-            return Converter(frase);
-
-        }
-
-        private static String Converter(string frase)
-        {
-            
-
-            if (frase.Contains("\0"))
-            {
-                return Replace2(frase);
-            }
-            else if (frase.Contains(" "))
-            {
-                return Replace1(frase);
-            }
-            else if (frase.Contains("-"))
-            {
-                return camelCase(frase);
-            }
-            else if (Regex.IsMatch(frase, "[α-ω]"))
-            {
-                return Omit5(frase);
-            }
-            else
-            {
-                return Omit4(frase);
             }
 
-        }
-        private static String Replace1(string frase)
-        {
-            return frase.Replace(" ", "_");
 
         }
-        private static string Replace2(string frase)
-        {
-            return frase.Replace("\0", "CTRL");
-        }
-        private static string Omit4(string frase)
-        {
-            return Regex.Replace(frase, "[^a-zA-z]", "");
-        }
-        private static string Omit5(string frase)
-        {
-            return Regex.Replace(frase, "[α-ω]", "");
-        }
-        private static string camelCase(string frase)
-        {
-            return Regex.Replace(frase, "-.", m => m.Value.ToUpper().Substring(1));
-        }
+
+        //public static string Clean(String frase)
+        //{
+
+
+        //    return Converter(frase);
+
+        //}
+
+        //private static String Converter(string frase)
+        //{
+        //    return Omit4(Omit5(camelCase(Replace1(Replace2(frase)))));
+        
+           
+        //}
+        //private static String Replace1(string frase)
+        //{
+        //    return frase.Replace(" ", "_");
+
+        //}
+        //private static string Replace2(string frase)
+        //{
+        //    return frase.Replace("\0", "CTRL");
+        //}
+        //private static string Omit4(string frase)
+        //{
+        //    return Regex.Replace(frase, "[^a-zA-ZΑ-Ω]", "");
+        //}
+        //private static string Omit5(string frase)
+        //{
+        //    return Regex.Replace(frase, "[α-ω]", "");
+        //}
+        //private static string camelCase(string frase)
+        //{
+        //    return Regex.Replace(frase, "-.", m => m.Value.ToUpper().Substring(1));
+        //}
 
     }
 }
