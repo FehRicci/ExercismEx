@@ -11,13 +11,14 @@ namespace ConsoleApp1
     {
         public static string Clean(String frase)
         {
-            StringBuilder sb = new StringBuilder();
-            string[] separar = frase.Split("-");
-            separar[1].ToUpper();
+            //string[] separar = frase.Split("-");
+           // separar[1].ToUpper();
 
-            sb.Append(separar);
-            sb.Replace(" ", "_");
-            sb.Replace("\0", "CTRL");
+
+            Convertedor(frase);
+            Testando(frase);
+            
+            /*sb.Replace("\0", "CTRL");
             for (int i = 0; i <= 9; i++)
             {
                 sb.Replace(i.ToString(), ""); 
@@ -29,7 +30,26 @@ namespace ConsoleApp1
            
             /*sb.Replace(, "");
             sb.Replace("[α-ω]", " ");*/
-            return sb.ToString();
+           
+        }
+
+        private static StringBuilder Convertedor(string frase)
+        {
+            StringBuilder sb = new StringBuilder();
+            return sb.Append(frase);
+        }
+        private static StringBuilder Trocando(string frase)
+        {
+            return Convertedor(frase).Replace(" ","_");
+
+        }
+        private static string Outro(string frase)
+        {
+            return Convertedor(frase).Replace("\0", "CTRL");
+        }
+        private static string Testando(string frase)
+        {
+            return Regex.Replace(frase,"[^a-zA-z]", "");
         }
     }
 }
