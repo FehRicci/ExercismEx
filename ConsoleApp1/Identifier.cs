@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -9,41 +10,48 @@ namespace ConsoleApp1
 {
     internal class Identifier
     {
+
+
         public static string Clean(String frase)
         {
-                   
-            
+
+
             return Converter(frase);
-            
+
         }
 
-        private  static String Converter(string frase)
+        private static String Converter(string frase)
         {
             
+
             if (frase.Contains("\0"))
             {
                 return Replace2(frase);
-            }else if (frase.Contains(" "))
+            }
+            else if (frase.Contains(" "))
             {
                 return Replace1(frase);
-            }else if (frase.Contains("-"))
+            }
+            else if (frase.Contains("-"))
             {
                 return camelCase(frase);
-            }else if(frase.Contains("[α-ω]")) {
+            }
+            else if (Regex.IsMatch(frase, "[α-ω]"))
+            {
                 return Omit5(frase);
             }
             else
             {
                 return Omit4(frase);
             }
-            
+
         }
-        private  static String Replace1(string frase)
+        private static String Replace1(string frase)
         {
             return frase.Replace(" ", "_");
 
         }
-        private  static string Replace2(string frase)
+        private static string Replace2(string frase)
         {
             return frase.Replace("\0", "CTRL");
         }
@@ -59,5 +67,6 @@ namespace ConsoleApp1
         {
             return Regex.Replace(frase, "-.", m => m.Value.ToUpper().Substring(1));
         }
+
     }
 }
