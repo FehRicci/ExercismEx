@@ -1,4 +1,4 @@
-﻿using Exercises;
+﻿using Exercises.SqueakyClean;
 
 internal class Program
 {

@@ -6,7 +6,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Exercises
+namespace Exercises.SqueakyClean
 {
     internal class Identifier
     {

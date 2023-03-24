@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
-namespace Exercises
+namespace Exercises.SqueakyClean
 {
     internal class TextCleaner
     {
@@ -23,7 +23,7 @@ namespace Exercises
         }
         public TextCleaner Ctrl()
         {
-            frase =  frase.Replace("\0", "CTRL");
+            frase = frase.Replace("\0", "CTRL");
             return this;
         }
         public TextCleaner SpecialChar()
