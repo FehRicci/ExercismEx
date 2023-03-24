@@ -1,4 +1,5 @@
-﻿using Exercises.BookingUp;
+
+using Exercises.BookingUp;
 using Exercises.SqueakyClean;
 
 internal class Program
