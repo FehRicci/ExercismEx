@@ -1,6 +1,5 @@
-﻿using Exercises.BookingUp;
+using Exercises.BookingUp;
 using Exercises.InterestIsInteresting;
-using Exercises.SqueakyClean;
 
 internal class Program
 {
@@ -28,5 +27,6 @@ internal class Program
         Console.WriteLine(SavingsAccount.Interest(balance: 200.75m));
         Console.WriteLine(SavingsAccount.AnnualBalanceUpdate(balance: 200.75m));
         Console.WriteLine(SavingsAccount.YearsBeforeDesiredBalance(balance: 200.75m, targetBalance: 214.88m));
+
     }
 }
