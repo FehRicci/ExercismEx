@@ -33,12 +33,26 @@ namespace Exercises.InterestIsInteresting
             
             decimal interest = Convert.ToDecimal(InterestRate(balance));
 
-            return interest * balance;
-
+            return (interest * balance)/100;
 
         }
 
+        public static decimal AnnualBalanceUpdate(decimal balance)
+        {
+                       return Interest(balance) + balance;
+        }
 
+        public static int YearsBeforeDesiredBalance(decimal balance, decimal targetBalance)
+        {
+            int soma = 0;
+            while (balance < targetBalance)
+            {
+                balance = AnnualBalanceUpdate(balance);
+                soma++;
 
+            }
+            return soma;
+
+        }
     }
 }

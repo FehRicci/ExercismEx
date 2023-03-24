@@ -26,5 +26,7 @@ internal class Program
 
         Console.WriteLine(SavingsAccount.InterestRate(balance: 200.75m));
         Console.WriteLine(SavingsAccount.Interest(balance: 200.75m));
+        Console.WriteLine(SavingsAccount.AnnualBalanceUpdate(balance: 200.75m));
+        Console.WriteLine(SavingsAccount.YearsBeforeDesiredBalance(balance: 200.75m, targetBalance: 214.88m));
     }
 }
