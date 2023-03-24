@@ -1,4 +1,4 @@
-﻿using ConsoleApp1;
+﻿using Exercises.SqueakyClean;
 
 internal class Program
 {
