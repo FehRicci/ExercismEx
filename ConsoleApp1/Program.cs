@@ -1,4 +1,4 @@
-﻿using ConsoleApp1;
+﻿using Exercises;
 
 internal class Program
 {
