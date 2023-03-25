@@ -1,5 +1,8 @@
 using Exercises.BookingUp;
 using Exercises.InterestIsInteresting;
+using Exercises.Pangram;
+using Exercises.SqueakyClean;
+
 
 internal class Program
 {
@@ -23,10 +26,13 @@ internal class Program
         //Console.WriteLine(Appointment.Description(new DateTime(2019, 03, 29, 15, 0, 0)));
         //Console.WriteLine(Appointment.AnniversaryDate());
 
-        Console.WriteLine(SavingsAccount.InterestRate(balance: 200.75m));
-        Console.WriteLine(SavingsAccount.Interest(balance: 200.75m));
-        Console.WriteLine(SavingsAccount.AnnualBalanceUpdate(balance: 200.75m));
-        Console.WriteLine(SavingsAccount.YearsBeforeDesiredBalance(balance: 200.75m, targetBalance: 214.88m));
+        //Console.WriteLine(SavingsAccount.InterestRate(balance: 200.75m));
+        //Console.WriteLine(SavingsAccount.Interest(balance: 200.75m));
+        //Console.WriteLine(SavingsAccount.AnnualBalanceUpdate(balance: 200.75m));
+        //Console.WriteLine(SavingsAccount.YearsBeforeDesiredBalance(balance: 200.75m, targetBalance: 214.88m));
+
+        Console.WriteLine(Pangram.checkPangram("OI"));
+        Console.WriteLine(Pangram.checkPangram("The quick brown fox jumps over the lazy dog"));
 
     }
 }
