@@ -1,7 +1,8 @@
-﻿using Exercises.BookingUp;
+using Exercises.BookingUp;
 using Exercises.InterestIsInteresting;
 using Exercises.Pangram;
 using Exercises.SqueakyClean;
+
 
 internal class Program
 {
@@ -32,5 +33,6 @@ internal class Program
 
         Console.WriteLine(Pangram.checkPangram("OI"));
         Console.WriteLine(Pangram.checkPangram("The quick brown fox jumps over the lazy dog"));
+
     }
 }
