@@ -2,6 +2,7 @@
 using Exercises.InterestIsInteresting;
 using Exercises.Pangram;
 using Exercises.SqueakyClean;
+using Exercises.Triangle;
 
 internal class Program
 {
@@ -30,7 +31,10 @@ internal class Program
         //Console.WriteLine(SavingsAccount.AnnualBalanceUpdate(balance: 200.75m));
         //Console.WriteLine(SavingsAccount.YearsBeforeDesiredBalance(balance: 200.75m, targetBalance: 214.88m));
 
-        Console.WriteLine(Pangram.checkPangram("OI"));
-        Console.WriteLine(Pangram.checkPangram("The quick brown fox jumps over the lazy dog"));
+        //Console.WriteLine(Pangram.checkPangram("OI"));
+        //Console.WriteLine(Pangram.checkPangram("The quick brown fox jumps over the lazy dog"));
+
+        WhichTriangle test = new WhichTriangle();
+        Console.WriteLine(test.triangleConditions(5,5,10));
     }
 }
