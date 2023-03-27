@@ -1,4 +1,4 @@
-﻿using Exercises.BookingUp;
+using Exercises.BookingUp;
 using Exercises.InterestIsInteresting;
 using Exercises.Pangram;
 using Exercises.ReverseString;
@@ -35,7 +35,6 @@ internal class Program
         //Console.WriteLine(Pangram.checkPangram("OI"));
         //Console.WriteLine(Pangram.checkPangram("The quick brown fox jumps over the lazy dog"));
 
-
         //Console.WriteLine("Equelatero :" + Triangle.IsEquilateral(5,5,5));
         //Console.WriteLine("Equelatero :" + Triangle.IsEquilateral(5, 10, 5));
         //Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(5, 5, 5));
@@ -45,5 +44,6 @@ internal class Program
         //Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(1, 1, 3));
 
         Console.WriteLine(ReverseString.Reverse("Fernanda"));
+
     }
 }
