@@ -34,7 +34,13 @@ internal class Program
         //Console.WriteLine(Pangram.checkPangram("OI"));
         //Console.WriteLine(Pangram.checkPangram("The quick brown fox jumps over the lazy dog"));
 
-        WhichTriangle test = new WhichTriangle();
-        Console.WriteLine(test.triangleConditions(5,5,10));
+        
+        Console.WriteLine("Equelatero :" + Triangle.IsEquilateral(5,5,5));
+        Console.WriteLine("Equelatero :" + Triangle.IsEquilateral(5, 10, 5));
+        Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(5, 5, 5));
+        Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(5, 10, 5));
+        Console.WriteLine("Escaleno :" + Triangle.IsScalene(5, 5, 5));
+        Console.WriteLine("Escaleno :" + Triangle.IsScalene(1, 2, 3));
+        Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(1, 1, 3));
     }
 }
