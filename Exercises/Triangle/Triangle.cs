@@ -8,6 +8,21 @@ namespace Exercises.Triangle
 {
     internal class Triangle
     {
+        public string triangleConditions(double sideOne, double sideTwo, double sideThree)
+        {
+            WhichTriangle triangle = new WhichTriangle();
+            if (sideOne + sideTwo >= sideThree || sideOne + sideThree >= sideTwo || sideTwo + sideThree >= sideOne)
+            {
+                if (IsEquilateral(sideOne, sideTwo, sideThree) == true)
+                    return "Equilateral Triangle";
+                else if (IsIsosceles(sideOne, sideTwo, sideThree) == true)
+                    return "Isosceles Triangle";
+                else
+                    return "Scalene Triangle";
+            }
+            else
+                return "It's not a triangle";
+        }
 
         public static bool IsScalene(double side1, double side2, double side3)
         {
