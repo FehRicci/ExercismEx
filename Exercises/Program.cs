@@ -1,5 +1,6 @@
 ﻿using Exercises.BookingUp;
 using Exercises.InterestIsInteresting;
+using Exercises.Isogram;
 using Exercises.Pangram;
 using Exercises.ReverseString;
 using Exercises.SqueakyClean;
@@ -44,6 +45,11 @@ internal class Program
         //Console.WriteLine("Escaleno :" + Triangle.IsScalene(1, 2, 3));
         //Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(1, 1, 3));
 
-        Console.WriteLine(ReverseString.Reverse("Fernanda"));
+        //Console.WriteLine(ReverseString.Reverse("Fernanda"));
+
+        
+        //Console.WriteLine(Isogram.IsIsogram("Fernanda"));
+        Console.WriteLine(Isogram.IsIsogram("lumberjacks"));
+
     }
 }
