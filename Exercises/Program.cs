@@ -1,6 +1,11 @@
 ﻿using Exercises.BookingUp;
 using Exercises.InterestIsInteresting;
 using Exercises.Pangram;
+<<<<<<< Updated upstream
+=======
+using Exercises.ProteinTranslation;
+using Exercises.ReverseString;
+>>>>>>> Stashed changes
 using Exercises.SqueakyClean;
 using Exercises.Triangle;
 
@@ -34,6 +39,7 @@ internal class Program
         //Console.WriteLine(Pangram.checkPangram("OI"));
         //Console.WriteLine(Pangram.checkPangram("The quick brown fox jumps over the lazy dog"));
 
+<<<<<<< Updated upstream
         
         Console.WriteLine("Equelatero :" + Triangle.IsEquilateral(5,5,5));
         Console.WriteLine("Equelatero :" + Triangle.IsEquilateral(5, 10, 5));
@@ -42,5 +48,26 @@ internal class Program
         Console.WriteLine("Escaleno :" + Triangle.IsScalene(5, 5, 5));
         Console.WriteLine("Escaleno :" + Triangle.IsScalene(1, 2, 3));
         Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(1, 1, 3));
+=======
+
+        //Console.WriteLine("Equelatero :" + Triangle.IsEquilateral(5,5,5));
+        //Console.WriteLine("Equelatero :" + Triangle.IsEquilateral(5, 10, 5));
+        //Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(5, 5, 5));
+        //Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(5, 10, 5));
+        //Console.WriteLine("Escaleno :" + Triangle.IsScalene(5, 5, 5));
+        //Console.WriteLine("Escaleno :" + Triangle.IsScalene(1, 2, 3));
+        //Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(1, 1, 3));
+
+        //Console.WriteLine(ReverseString.Reverse("Fernanda"));
+
+
+        //Console.WriteLine(Isogram.IsIsogram("Fernanda"));
+        //Console.WriteLine(Isogram.IsIsogram("lumberjacks"));
+        //Console.WriteLine(Isogram.IsIsogram("background"));
+        //Console.WriteLine(Isogram.IsIsogram("Alphabet"));
+
+        Console.WriteLine(ProteinTranslation.Proteins("AUGUUUUCU"));
+
+>>>>>>> Stashed changes
     }
 }
