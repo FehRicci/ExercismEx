@@ -47,9 +47,12 @@ internal class Program
 
         //Console.WriteLine(ReverseString.Reverse("Fernanda"));
 
-        
-        //Console.WriteLine(Isogram.IsIsogram("Fernanda"));
+
+        Console.WriteLine(Isogram.IsIsogram("Fernanda"));
         Console.WriteLine(Isogram.IsIsogram("lumberjacks"));
+        Console.WriteLine(Isogram.IsIsogram("background"));
+        Console.WriteLine(Isogram.IsIsogram("Alphabet"));
+
 
     }
 }

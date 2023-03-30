@@ -10,21 +10,26 @@ namespace Exercises.Isogram
     {
         public static bool IsIsogram(string word)
         {
-            
-            if (test(word) > word.Length)
+            if (word != "")
             {
-                return false;     
-            }else
+                if (CheckingLetters(word) >= word.Length)
+                {
+                    return false;
+                }
+                else
+                    return true;
+            }
+            else
                 return true;
 
         }
-        private static int test(string word)
+        private static int CheckingLetters(string word)
         {
             int times = 0;
-            char[] frase = word.ToCharArray();
+            char[] frase = word.ToLower().ToCharArray();
             for (int i = 0; i < frase.Length - 1; i++)
             {
-                for (int j = 0; j < frase.Length - 1; j++)
+                for (int j = frase.Length - 1 ; j >= 0; j--)
                 {
                     if (frase[i] == frase[j])
                     {
@@ -36,5 +41,6 @@ namespace Exercises.Isogram
             }
             return times;
         }
+
     }
 }
