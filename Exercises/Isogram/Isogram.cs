@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace Exercises.Isogram
@@ -10,9 +11,9 @@ namespace Exercises.Isogram
     {
         public static bool IsIsogram(string word)
         {
-            if (word != "")
+            if (CleanWord(word) != "")
             {
-                if (CheckingLetters(word) >= word.Length)
+                if (CheckingLetters(word) >= CleanWord(word).Length)
                 {
                     return false;
                 }
@@ -23,10 +24,11 @@ namespace Exercises.Isogram
                 return true;
 
         }
+
         private static int CheckingLetters(string word)
         {
             int times = 0;
-            char[] frase = word.ToLower().ToCharArray();
+            char[] frase = CleanWord(word).ToLower().ToCharArray();
             for (int i = 0; i < frase.Length - 1; i++)
             {
                 for (int j = frase.Length - 1 ; j >= 0; j--)
@@ -40,6 +42,11 @@ namespace Exercises.Isogram
                 }
             }
             return times;
+        }
+
+        private static string CleanWord(string word)
+        {
+            return Regex.Replace(word, "[^a-zA-Z]", "").ToLower();
         }
 
     }
