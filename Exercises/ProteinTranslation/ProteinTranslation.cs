@@ -14,21 +14,23 @@ namespace Exercises.ProteinTranslation
 
         public static string[] Proteins(string strand)
         {
-            string[] parts = new string[strand.Length - 1];
-
+            string[] parts = new string[strand.Length / 3];
+            int j = 0;
             for (int i = 0; i <= strand.Length - 3; i = i + 3)
             {
-                for (int j = 0; j <= strand.Length - 1; j++)
-                {
-                    parts[j] = strand.Substring(i, 3);
-                }
+                parts[j] = strand.Substring(i, 3);
+                j++;
             }
             string[] proteins = new string[parts.Length];
 
-            foreach (string part in parts)
+            for (int i = 0; i <= proteins.Length - 1; i++)
             {
-                for (int i = 0; i <= proteins.Length - 3; i = i + 3) { }
+                proteins[i] = StopCondition(parts[i]);
+                
             }
+
+
+            return proteins;
 
 
         }
