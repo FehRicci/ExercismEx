@@ -35,10 +35,12 @@ namespace Exercises.ProteinTranslation
 
         }
 
+
+
         private static string StopCondition(string strand)
         {
             if (strand == "UAA" || strand == "UAG" || strand == "UGA")
-                return "";
+                return string.Empty;
             else
                 return ProteinList(strand);
         }
