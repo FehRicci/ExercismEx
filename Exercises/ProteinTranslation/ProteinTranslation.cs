@@ -16,32 +16,25 @@ namespace Exercises.ProteinTranslation
         {
             string[] codon = new string[strand.Length / 3];
             int arryIndex = 0;
+
             for (int i = 0; i <= strand.Length - 3; i = i + 3)
             {
                 codon[arryIndex] = strand.Substring(i, 3);
                 arryIndex++;
             }
+
             List<string> proteins = new();
 
             for (int i = 0; i <= codon.Length - 1; i++)
             {
                 if (CodonStopsTranslation(codon[i]))
-                {
                     break;
-                }
                 else
-                {
                     proteins.Add(ProteinListTranslation(codon[i]));
-                }
             }
 
-
             return proteins.ToArray();
-
-
         }
-
-
 
         private static bool CodonStopsTranslation(string Codons)
         {
@@ -79,7 +72,6 @@ namespace Exercises.ProteinTranslation
                 return "Tryptophan";
             else
                 return string.Empty;
-
         }
     }
 }
