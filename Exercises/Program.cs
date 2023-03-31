@@ -1,10 +1,12 @@
-﻿using Exercises.BinarySearch;
-using Exercises.BookingUp;
+using Exercises.BinarySearch;
 using Exercises.Darts;
-using Exercises.InterestIsInteresting;
 using Exercises.Leap;
-using Exercises.Pangram;
 using Exercises.ProteinTranslation;
+using Exercises.BookingUp;
+using Exercises.InterestIsInteresting;
+using Exercises.Isogram;
+using Exercises.Pangram;
+using Exercises.ReverseString;
 using Exercises.SqueakyClean;
 using Exercises.Triangle;
 
@@ -48,7 +50,6 @@ internal class Program
 
         //Console.WriteLine(ReverseString.Reverse("Fernanda"));
 
-
         //Console.WriteLine(Isogram.IsIsogram("Fernanda"));
         //Console.WriteLine(Isogram.IsIsogram("lumberjacks"));
         //Console.WriteLine(Isogram.IsIsogram("background"));
@@ -64,10 +65,6 @@ internal class Program
         //Console.WriteLine(Darts.Score(-9, 9));
         //Console.WriteLine(Darts.Score(-0.1, -0.1));
         //Console.WriteLine(Darts.Score(-3.5, 3.5));
-
-        
-
-
 
     }
 }
