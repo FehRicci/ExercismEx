@@ -1,5 +1,6 @@
 ﻿using Exercises.BookingUp;
 using Exercises.InterestIsInteresting;
+using Exercises.Leap;
 using Exercises.Pangram;
 using Exercises.ProteinTranslation;
 using Exercises.SqueakyClean;
@@ -51,7 +52,13 @@ internal class Program
         //Console.WriteLine(Isogram.IsIsogram("background"));
         //Console.WriteLine(Isogram.IsIsogram("Alphabet"));
 
-        Console.WriteLine(ProteinTranslation.Proteins("AUGUUUUCU"));
+        //Console.WriteLine(ProteinTranslation.Proteins("AUGUUUUCU"));
+
+        Console.WriteLine(Leap.IsLeapYear(1997));
+        Console.WriteLine(Leap.IsLeapYear(1996));
+        Console.WriteLine(Leap.IsLeapYear(1900));
+        Console.WriteLine(Leap.IsLeapYear(2000));
+
 
 
     }
