@@ -1,7 +1,9 @@
-﻿using Exercises.BookingUp;
-using Exercises.InterestIsInteresting;
-using Exercises.Pangram;
 using Exercises.ProteinTranslation;
+using Exercises.BookingUp;
+using Exercises.InterestIsInteresting;
+using Exercises.Isogram;
+using Exercises.Pangram;
+using Exercises.ReverseString;
 using Exercises.SqueakyClean;
 using Exercises.Triangle;
 
@@ -44,7 +46,6 @@ internal class Program
         //Console.WriteLine("Isosceles :" + Triangle.IsIsosceles(1, 1, 3));
 
         //Console.WriteLine(ReverseString.Reverse("Fernanda"));
-
 
         //Console.WriteLine(Isogram.IsIsogram("Fernanda"));
         //Console.WriteLine(Isogram.IsIsogram("lumberjacks"));
