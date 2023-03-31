@@ -14,35 +14,41 @@ namespace Exercises.ProteinTranslation
 
         public static string[] Proteins(string strand)
         {
-            string[] parts = new string[strand.Length / 3];
-            int j = 0;
+            string[] codon = new string[strand.Length / 3];
+            int arryIndex = 0;
             for (int i = 0; i <= strand.Length - 3; i = i + 3)
             {
-                parts[j] = strand.Substring(i, 3);
-                j++;
+                codon[arryIndex] = strand.Substring(i, 3);
+                arryIndex++;
             }
-            string[] proteins = new string[parts.Length];
+            List<string> proteins = new();
 
-            for (int i = 0; i <= proteins.Length - 1; i++)
+            for (int i = 0; i <= codon.Length - 1; i++)
             {
-                proteins[i] = StopCondition(parts[i]);
-                
+                if (CodonStopsTranslation(codon[i]))
+                {
+                    break;
+                }
+                else
+                {
+                    proteins.Add(ProteinListTranslation(codon[i]));
+                }
             }
 
 
-            return proteins;
+            return proteins.ToArray();
 
 
         }
 
 
 
-        private static string StopCondition(string strand)
+        private static bool CodonStopsTranslation(string Codons)
         {
-            if (strand == "UAA" || strand == "UAG" || strand == "UGA")
-                return string.Empty;
+            if (Codons == "UAA" || Codons == "UAG" || Codons == "UGA")
+                return true;
             else
-                return ProteinList(strand);
+                return false;
         }
 
         //Codon               Protein
@@ -55,24 +61,24 @@ namespace Exercises.ProteinTranslation
         //UGG                 Tryptophan
         //UAA, UAG, UGA       STOP
 
-        private static string ProteinList(string strand)
+        private static string ProteinListTranslation(string Codons)
         {
-            if (strand == "AUG")
+            if (Codons == "AUG")
                 return "Methionine";
-            else if (strand == "UUU" || strand == "UUC")
+            else if (Codons == "UUU" || Codons == "UUC")
                 return "Phenylalanine";
-            else if (strand == "UUA" || strand == "UUG")
+            else if (Codons == "UUA" || Codons == "UUG")
                 return "Leucine";
-            else if (strand == "UCU" || strand == "UCC" || strand == "UCA" || strand == "UCG")
+            else if (Codons == "UCU" || Codons == "UCC" || Codons == "UCA" || Codons == "UCG")
                 return "Serine";
-            else if (strand == "UAU" || strand == "UAC")
+            else if (Codons == "UAU" || Codons == "UAC")
                 return "Tyrosine";
-            else if (strand == "UGU" || strand == "UGC")
+            else if (Codons == "UGU" || Codons == "UGC")
                 return "Cysteine";
-            else if (strand == "UGG")
+            else if (Codons == "UGG")
                 return "Tryptophan";
             else
-                return "Another";
+                return string.Empty;
 
         }
     }
