@@ -1,3 +1,4 @@
+using Exercises.Darts;
 using Exercises.Leap;
 using Exercises.ProteinTranslation;
 using Exercises.BookingUp;
@@ -55,10 +56,14 @@ internal class Program
 
         //Console.WriteLine(ProteinTranslation.Proteins("AUGUUUUCU"));
 
-        Console.WriteLine(Leap.IsLeapYear(1997));
-        Console.WriteLine(Leap.IsLeapYear(1996));
-        Console.WriteLine(Leap.IsLeapYear(1900));
-        Console.WriteLine(Leap.IsLeapYear(2000));
+        //Console.WriteLine(Leap.IsLeapYear(1997));
+        //Console.WriteLine(Leap.IsLeapYear(1996));
+        //Console.WriteLine(Leap.IsLeapYear(1900));
+        //Console.WriteLine(Leap.IsLeapYear(2000));
+
+        Console.WriteLine(Darts.Score(-9, 9));
+        Console.WriteLine(Darts.Score(-0.1, -0.1));
+        Console.WriteLine(Darts.Score(-3.5, 3.5));
 
     }
 }
