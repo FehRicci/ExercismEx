@@ -10,26 +10,24 @@ namespace Exercises.BinarySearch
     {
         public static int Find(int[] input, int value)
         {
+            int smaller = 0;
+            int bigger = input.Length - 1;
+            int tester;
 
-            //int index = input.Length / 2;
+           while (bigger > smaller)
+            {
+                tester = (bigger + smaller) / 2;
+                if (input[tester] == value)
+                    return tester;
+                else if (input[tester] < value)
+                    smaller = tester + 1;
+                else
+                    bigger = tester - 1;
+            }
+            return -1;
 
-            //while (input[index] != value)
-            //{
-            //    if (input[index] > value)
-            //        index = index / 2;
-            //    else if (input[index] < value)
-            //        index = index * 2;
-            //    else
-            //    {
-            //       index = -1;
-            //       break;
-            //    }
-
-            //}
-
-            //return input[index];
         }
 
-        
+
     }
 }
