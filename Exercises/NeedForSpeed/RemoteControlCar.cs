@@ -8,35 +8,16 @@ namespace Exercises.NeedForSpeed
 {
     class RemoteControlCar
     {
-        private int _battery;
-        private int _distance;
-        public RemoteControlCar()
+        private int _speed;
+        private int _batteryDrain;
+
+        public RemoteControlCar(int speed, int batteryDrain)
         {
-            _battery = 100;
-            _distance = 0;
+            _speed = speed;
+            _batteryDrain = batteryDrain;
         }
-        public static RemoteControlCar Buy()
-        {
-            RemoteControlCar car = new RemoteControlCar();
-            return car;
-        }
-        public void Drive()
-        {
-            if (_battery > 0)
-            {
-                _distance += 20;
-                _battery -= 1;
-            }
-        }
-        public string DistanceDisplay()
-        {
-            return "Driven " + _distance + " meters";
-        }
-        public string BatteryDisplay()
-        {
-            if (_battery > 0) return "Battery at " + _battery + "%";
-            else return "Battery empty";
-        }
+
+
     }
 
 }
