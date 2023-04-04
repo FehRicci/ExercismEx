@@ -19,18 +19,18 @@ namespace Exercises.NeedForSpeed
             _batteryDrain = batteryDrain;
         }
 
-        private void Drive(int speed)
+        public void Drive()
         {
             _distance += _speed;
             _battery -= _batteryDrain;
         }
 
-        private int DistanceDriven()
+        public int DistanceDriven()
         {
             return _distance;
         }
 
-        private bool BatteryDrained()
+        public bool BatteryDrained()
         {
             if (_battery > 0)
                 return false;
@@ -38,7 +38,7 @@ namespace Exercises.NeedForSpeed
                 return true;
         }
 
-        private void Nitro()
+        public void Nitro()
         {
             RemoteControlCar nitro = new RemoteControlCar(50, 4);
         }

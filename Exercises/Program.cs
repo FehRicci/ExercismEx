@@ -9,6 +9,7 @@ using Exercises.Pangram;
 using Exercises.ReverseString;
 using Exercises.SqueakyClean;
 using Exercises.Triangle;
+using Exercises.NeedForSpeed;
 
 internal class Program
 {
