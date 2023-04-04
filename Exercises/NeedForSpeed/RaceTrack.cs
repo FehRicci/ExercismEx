@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace Exercises.NeedForSpeed
 {
-    internal class RaceTrack
+     class RaceTrack
     {
+        private int _distance;
+
+        public RaceTrack(int distance)
+        {
+            _distance = distance;
+        }
     }
 }
