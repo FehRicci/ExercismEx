@@ -21,8 +21,17 @@ namespace Exercises.NeedForSpeed
 
         public void Drive()
         {
-            _distance += _speed;
-            _battery -= _batteryDrain;
+            if (BatteryDrained() == false)
+            {
+                _distance += _speed;
+                _battery -= _batteryDrain;
+            }
+            else
+            {
+                _distance = _distance;
+                _battery = _battery;
+            }
+
         }
 
         public int DistanceDriven()
@@ -32,15 +41,16 @@ namespace Exercises.NeedForSpeed
 
         public bool BatteryDrained()
         {
-            if (_battery > 0)
+            if (_battery >= _batteryDrain)
                 return false;
             else
                 return true;
         }
 
-        public void Nitro()
+        public static RemoteControlCar Nitro()
         {
             RemoteControlCar nitro = new RemoteControlCar(50, 4);
+            return nitro;
         }
     }
 

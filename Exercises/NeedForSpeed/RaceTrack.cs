@@ -21,7 +21,7 @@ namespace Exercises.NeedForSpeed
             {
                 controlCar.Drive();
             }
-            if (controlCar.DistanceDriven() > _distance)
+            if (controlCar.DistanceDriven() >= _distance)
                 return true;
             else 
                 return false;
