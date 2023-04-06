@@ -41,10 +41,7 @@ namespace Exercises.NeedForSpeed
 
         public bool BatteryDrained()
         {
-            if (_battery >= _batteryDrain)
-                return false;
-            else
-                return true;
+            return !(_battery >= _batteryDrain);
         }
 
         public static RemoteControlCar Nitro()
