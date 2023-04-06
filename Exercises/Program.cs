@@ -15,18 +15,8 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-
-        int speed = 100;
-        int batteryDrain = 60;
-        var car = new RemoteControlCar(speed, batteryDrain);
-        int distance = 16;
-        var race = new RaceTrack(distance);
-        car.Drive();
-        car.Drive();
-        Console.WriteLine(car.BatteryDrained());
-        Console.WriteLine(car.DistanceDriven());
-        Console.WriteLine(race.TryFinishTrack(car));
-
-
+        var array = new[] { 1, 3, 4, 6, 8, 9, 11 };
+        var value = 11;
+        Console.WriteLine(BinarySearch.Find(array, value));
     }
 }

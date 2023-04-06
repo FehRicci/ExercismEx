@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,25 +10,20 @@ namespace Exercises.BinarySearch
     {
         public static int Find(int[] input, int value)
         {
-            int index = input.Length / 2;
+            int smallIndex = 0;
+            int bigIndex = input.Length - 1;
 
-            while (input[index] != value)
+            while (bigIndex >= smallIndex)
             {
-                if (input[index] > value)
-                    index = index / 2;
-                else if (input[index] < value)
-                    index = index * 2;
+                int indexToTest = (bigIndex + smallIndex) / 2;
+                if (input[indexToTest] == value)
+                    return indexToTest;
+                else if (input[indexToTest] < value)
+                    smallIndex = indexToTest + 1;
                 else
-                {
-                   index = -1;
-                   break;
-                }
-
+                    bigIndex = indexToTest - 1;
             }
-
-            return input[index];
+            return -1;
         }
-
-        
     }
 }
