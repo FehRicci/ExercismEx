@@ -21,7 +21,7 @@ namespace Exercises.NeedForSpeed
 
         public void Drive()
         {
-            if (BatteryDrained() == false)
+            if (!BatteryDrained())
             {
                 _distance += _speed;
                 _battery -= _batteryDrain;

@@ -21,10 +21,8 @@ namespace Exercises.NeedForSpeed
             {
                 controlCar.Drive();
             }
-            if (controlCar.DistanceDriven() >= _distance)
-                return true;
-            else 
-                return false;
+
+            return controlCar.DistanceDriven() >= _distance;
         }
     }
 }

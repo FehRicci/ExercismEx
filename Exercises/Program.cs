@@ -16,6 +16,7 @@ internal class Program
     private static void Main(string[] args)
     {
 
+<<<<<<< HEAD
         //Console.WriteLine(Identifier.Clean("my   Id"));
         //Console.WriteLine(Identifier.Clean("my\0Id"));
         //Console.WriteLine(Identifier.Clean("à-?ç"));
@@ -67,6 +68,8 @@ internal class Program
         //Console.WriteLine(Darts.Score(-0.1, -0.1));
         //Console.WriteLine(Darts.Score(-3.5, 3.5));
 
+=======
+>>>>>>> 41feec4 (Codigo refatorado seguindo feedback)
         int speed = 100;
         int batteryDrain = 60;
         var car = new RemoteControlCar(speed, batteryDrain);
