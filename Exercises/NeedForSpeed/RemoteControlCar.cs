@@ -26,29 +26,13 @@ namespace Exercises.NeedForSpeed
                 _distance += _speed;
                 _battery -= _batteryDrain;
             }
-            else
-            {
-                _distance = _distance;
-                _battery = _battery;
-            }
-
         }
 
-        public int DistanceDriven()
-        {
-            return _distance;
-        }
+        public int DistanceDriven() => _distance;
 
-        public bool BatteryDrained()
-        {
-            return !(_battery >= _batteryDrain);
-        }
+        public bool BatteryDrained() => !(_battery >= _batteryDrain);
 
-        public static RemoteControlCar Nitro()
-        {
-            RemoteControlCar nitro = new RemoteControlCar(50, 4);
-            return nitro;
-        }
+        public static RemoteControlCar Nitro() => new RemoteControlCar(50, 4);  
     }
 
 }
