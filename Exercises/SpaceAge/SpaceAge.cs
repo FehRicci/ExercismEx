@@ -17,21 +17,21 @@ namespace Exercises.SpaceAge
         }
 
         public float OnEarth() => _informedYear;
-        
+
         public float OnMercury() => _informedYear / orbitalPeriodInYears("Mercury");
-       
+
         public float OnVenus() => _informedYear / orbitalPeriodInYears("Venus");
-       
+
         public float OnMars() => _informedYear / orbitalPeriodInYears("Mars");
-       
+
         public float OnJupiter() => _informedYear / orbitalPeriodInYears("Jupiter");
-        
+
         public float OnSaturn() => _informedYear / orbitalPeriodInYears("Saturn");
 
         public float OnUranus() => _informedYear / orbitalPeriodInYears("Uranus");
 
         public float OnNeptune() => _informedYear / orbitalPeriodInYears("Neptune");
-   
+
         //Mercury: orbital period 0.2408467 Earth years
         //Venus: orbital period 0.61519726 Earth years
         //Earth: orbital period 1.0 Earth years, 365.25 Earth days, or 31557600 seconds
@@ -64,5 +64,5 @@ namespace Exercises.SpaceAge
             }
         }
     }
-    }
 }
+
