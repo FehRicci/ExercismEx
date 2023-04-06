@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +12,8 @@ namespace Exercises.BinarySearch
         {
             int smallIndex = 0;
             int bigIndex = input.Length - 1;
-            
 
-           while (bigIndex >= smallIndex)
+            while (bigIndex >= smallIndex)
             {
                 int indexTester = (bigIndex + smallIndex) / 2;
                 if (input[indexTester] == value)
