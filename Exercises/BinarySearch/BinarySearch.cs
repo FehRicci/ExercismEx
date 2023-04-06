@@ -15,13 +15,13 @@ namespace Exercises.BinarySearch
 
             while (bigIndex >= smallIndex)
             {
-                int indexTester = (bigIndex + smallIndex) / 2;
-                if (input[indexTester] == value)
-                    return indexTester;
-                else if (input[indexTester] < value)
-                    smallIndex = indexTester + 1;
+                int indexToTest = (bigIndex + smallIndex) / 2;
+                if (input[indexToTest] == value)
+                    return indexToTest;
+                else if (input[indexToTest] < value)
+                    smallIndex = indexToTest + 1;
                 else
-                    bigIndex = indexTester - 1;
+                    bigIndex = indexToTest - 1;
             }
             return -1;
         }
