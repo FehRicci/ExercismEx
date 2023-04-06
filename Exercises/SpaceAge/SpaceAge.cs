@@ -8,55 +8,30 @@ namespace Exercises.SpaceAge
 {
     internal class SpaceAge
     {
-        private float _years;
         private float _informedYear;
 
         public SpaceAge(int seconds)
         {
-            float yearInSeconds = 31557600f;
+            const float yearInSeconds = 31557600f;
             _informedYear = seconds / yearInSeconds;
         }
 
-        public float OnEarth()
-        {
-            return _informedYear;
-        }
+        public float OnEarth() => _informedYear;
+        
+        public float OnMercury() => _informedYear / orbitalPeriodInYears("Mercury");
+       
+        public float OnVenus() => _informedYear / orbitalPeriodInYears("Venus");
+       
+        public float OnMars() => _informedYear / orbitalPeriodInYears("Mars");
+       
+        public float OnJupiter() => _informedYear / orbitalPeriodInYears("Jupiter");
+        
+        public float OnSaturn() => _informedYear / orbitalPeriodInYears("Saturn");
 
-        public float OnMercury()
-        {
-            return _informedYear / orbitalPeriodInYears("Mercury");
-        }
+        public float OnUranus() => _informedYear / orbitalPeriodInYears("Uranus");
 
-        public float OnVenus()
-        {
-            return _informedYear / orbitalPeriodInYears("Venus");
-        }
-
-        public float OnMars()
-        {
-            return _informedYear / orbitalPeriodInYears("Mars");
-        }
-
-        public float OnJupiter()
-        {
-            return _informedYear / orbitalPeriodInYears("Jupiter");
-        }
-
-        public float OnSaturn()
-        {
-            return _informedYear / orbitalPeriodInYears("Saturn");
-        }
-
-        public float OnUranus()
-        {
-            return _informedYear / orbitalPeriodInYears("Uranus");
-        }
-
-        public float OnNeptune()
-        {
-            return _informedYear / orbitalPeriodInYears("Neptune");
-        }
-
+        public float OnNeptune() => _informedYear / orbitalPeriodInYears("Neptune");
+   
         //Mercury: orbital period 0.2408467 Earth years
         //Venus: orbital period 0.61519726 Earth years
         //Earth: orbital period 1.0 Earth years, 365.25 Earth days, or 31557600 seconds
@@ -71,21 +46,21 @@ namespace Exercises.SpaceAge
             switch (planet)
             {
                 case "Mercury":
-                    return _years = 0.2408467f;
+                    return 0.2408467f;
                 case "Venus":
-                    return _years = 0.61519726f;
+                    return 0.61519726f;
                 case "Mars":
-                    return _years = 1.8808158f;
+                    return 1.8808158f;
                 case "Jupiter":
-                    return _years = 11.862615f;
+                    return 11.862615f;
                 case "Saturn":
-                    return _years = 29.447498f;
+                    return 29.447498f;
                 case "Uranus":
-                    return _years = 84.016846f;
+                    return 84.016846f;
                 case "Neptune":
-                    return _years = 164.79132f;
+                    return 164.79132f;
                 default:
-                    return _years = 1f;
+                    return 1f;
             }
         }
     }
