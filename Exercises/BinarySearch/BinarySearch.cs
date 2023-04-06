@@ -12,11 +12,11 @@ namespace Exercises.BinarySearch
         {
             int smallIndex = 0;
             int bigIndex = input.Length - 1;
-            int indexTester;
+            
 
            while (bigIndex >= smallIndex)
             {
-                indexTester = (bigIndex + smallIndex) / 2;
+                int indexTester = (bigIndex + smallIndex) / 2;
                 if (input[indexTester] == value)
                     return indexTester;
                 else if (input[indexTester] < value)
