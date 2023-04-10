@@ -10,13 +10,12 @@ using Exercises.ReverseString;
 using Exercises.SqueakyClean;
 using Exercises.Triangle;
 using Exercises.NeedForSpeed;
+using Exercises.SumOfMultiples;
 
 internal class Program
 {
     private static void Main(string[] args)
     {
-        var array = new[] { 1, 3, 4, 6, 8, 9, 11 };
-        var value = 11;
-        Console.WriteLine(BinarySearch.Find(array, value));
+        Console.WriteLine(SumOfMultiples.Sum(new[] { 3, 5 }, 20));
     }
 }
