@@ -10,25 +10,28 @@ namespace Exercises.SumOfMultiples
     {
         public static int Sum(IEnumerable<int> multiples, int max)
         {
-            List<int> result = new List<int>();
+            int sum = 0;
+
+            foreach (int value in multiplesList(multiples, max))
+            {
+                sum += value;
+            }
+            return sum;
+        }
+
+        private static List<int> multiplesList(IEnumerable<int> multiples, int max)
+        {
+            List<int> multipleList = new();
+
             foreach (int multiple in multiples)
             {
                 for (int i = 1; i < max; i++)
                 {
                     if (multiple != 0 && (i % multiple) == 0)
-                    {
-                        result.Add(i);
-                    }
+                        multipleList.Add(i);
                 }
             }
-            int sum = 0;
-            List<int> uniqueMultiples = result.Distinct().ToList();
-            
-            foreach (int value in uniqueMultiples)
-            {
-                sum += value;
-            }
-            return sum;
+            return multipleList.Distinct().ToList();
         }
     }
 }
