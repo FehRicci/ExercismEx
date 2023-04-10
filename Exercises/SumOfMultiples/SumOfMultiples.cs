@@ -15,7 +15,7 @@ namespace Exercises.SumOfMultiples
             {
                 for (int i = 1; i < max; i++)
                 {
-                    if ((i % multiple) == 0)
+                    if (multiple != 0 && (i % multiple) == 0)
                     {
                         result.Add(i);
                     }
