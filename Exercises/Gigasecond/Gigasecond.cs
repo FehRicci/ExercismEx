@@ -8,9 +8,8 @@ namespace Exercises.Gigasecond
 {
     internal static class Gigasecond
     {
-        public static DateTime Add(DateTime moment)
-        {
-            return moment.AddSeconds(1000000000);
-        }
+        private static float _gigasecond = 1e9f;
+
+        public static DateTime Add(DateTime moment) => moment.AddSeconds(_gigasecond);
     }
 }
