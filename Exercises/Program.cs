@@ -10,6 +10,8 @@ using Exercises.ReverseString;
 using Exercises.SqueakyClean;
 using Exercises.Triangle;
 using Exercises.NeedForSpeed;
+using Exercises.SumOfMultiples;
+using Exercises.Gigasecond;
 
 internal class Program
 {
