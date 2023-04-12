@@ -27,9 +27,8 @@ namespace Exercises.SumOfMultiples
             {
                 if (value != 0)
                 {
-                    for (int i = value; i < upperIndex; i++)
+                    for (int i = value; i < upperIndex; i = i + value)
                     {
-                        if (i % value == 0)
                             multiple.Add(i);
                     }
                 }
