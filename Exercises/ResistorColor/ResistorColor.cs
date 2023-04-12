@@ -10,15 +10,16 @@ namespace Exercises.ResistorColor
     {
         public static int ColorCode(string color)
         {
-            for (int i = 0; i < Colors().Length; i++)
+            string[] listColors = Colors();
+
+            for (int i = 0; i < listColors.Length; i++)
             {
-                if (Colors()[i] == color.ToLower())
+                if (listColors[i] == color.ToLower())
                     return i;
             }
             return -1;
         }
 
         public static string[] Colors() => new string[]{"black","brown","red","orange","yellow","green","blue","violet","grey","white"};
-
     }
 }
