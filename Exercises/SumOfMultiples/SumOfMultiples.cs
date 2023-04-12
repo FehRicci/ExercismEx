@@ -8,30 +8,33 @@ namespace Exercises.SumOfMultiples
 {
     internal static class SumOfMultiples
     {
-        public static int Sum(IEnumerable<int> multiples, int max)
+        public static int Sum(IEnumerable<int> multiplesBase, int upperIndex)
         {
             int sum = 0;
 
-            foreach (int value in multiplesList(multiples, max))
+            foreach (int value in multiples(multiplesBase, upperIndex))
             {
                 sum += value;
             }
             return sum;
         }
 
-        private static List<int> multiplesList(IEnumerable<int> multiples, int max)
+        private static List<int> multiples(IEnumerable<int> multiplesBase, int upperIndex)
         {
-            List<int> multipleList = new();
+            List<int> multiple = new();
 
-            foreach (int multiple in multiples)
+            foreach (int value in multiplesBase)
             {
-                for (int i = 1; i < max; i++)
+                if (value != 0)
                 {
-                    if (multiple != 0 && (i % multiple) == 0)
-                        multipleList.Add(i);
+                    for (int i = value; i < upperIndex; i++)
+                    {
+                        if (i % value == 0)
+                            multiple.Add(i);
+                    }
                 }
             }
-            return multipleList.Distinct().ToList();
+            return multiple.Distinct().ToList();
         }
     }
 }
