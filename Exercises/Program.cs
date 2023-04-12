@@ -17,6 +17,6 @@ internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine(SumOfMultiples.Sum(new[] { 3, 5 }, 20));
+
     }
 }
