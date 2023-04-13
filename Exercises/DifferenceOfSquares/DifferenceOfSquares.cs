@@ -8,33 +8,27 @@ namespace Exercises.DifferenceOfSquares
 {
     internal class DifferenceOfSquares
     {
-        public static int CalculateDifferenceOfSquares(int value)
+        public static double CalculateDifferenceOfSquares(int value)
         {
-            int SumOfSquares = CalculateSumOfSquares(value);
-            int SquareOfSum = CalculateSquareOfSum(value);
-
-            if (SumOfSquares > SquareOfSum)
-                return SumOfSquares - SquareOfSum;
-            else
-                return SquareOfSum - SumOfSquares;
+            return Math.Abs(CalculateSumOfSquares(value) - CalculateSquareOfSum(value));
         }
 
-        public static int CalculateSquareOfSum(int value)
+        public static double CalculateSquareOfSum(int value)
         {
             int sum = 0;
             for (int i = 1; i <= value; i++)
             {
                 sum += i;
             }
-            return sum*sum;
+            return Math.Pow(sum,2);
         }
 
-        public static int CalculateSumOfSquares(int value)
+        public static double CalculateSumOfSquares(int value)
         {
-            int sum = 0;
+            double sum = 0;
             for (int i = 1; i <= value; i++)
             {
-                sum = (i * i) + sum;
+                sum = Math.Pow(i,2) + sum;
             }
             return sum;
         }
